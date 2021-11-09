@@ -1,20 +1,19 @@
-import React from "react";
+import React from "react"
 import {
   BrowserRouter,
   Switch,
   Route
-} from "react-router-dom";
-
-import Home from "./pages/Home";
+} from "react-router-dom"
+import 'animate.css'
+import Home from "./pages/Home"
 import News from './pages/News'
 import Games from './pages/Games'
-import Header from "./components/Header";
+import Header from "./components/Header"
 
 
 export default function App() {
   return (
     <BrowserRouter>
-        <Header />
         <Switch>
           <Route path="/games">
             <Games />
@@ -27,5 +26,5 @@ export default function App() {
           </Route>
         </Switch>
     </BrowserRouter>
-  );
+  )
 }

@@ -1,19 +1,14 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import * as C from './Styles'
 
-const Menu = props => {
-  const [ open, setOpen ] = useState(true)
-  const toggleMenu = ()=>{
-    setOpen( prev => !prev )
+const Menu = ({ handleNavToggle }) => {
+    return (
+        <C.StyledMenu>
+            <C.StyledLink className="animate__animated animate__fadeInRight" to="/">Home</C.StyledLink>
+            <C.StyledLink className="animate__animated animate__fadeInRight" to="/games">Games</C.StyledLink>
+            <C.StyledLink className="animate__animated animate__fadeInRight" to="/news">News</C.StyledLink>
+            <C.CloseToggle className="animate__animated animate__fadeInRight" onClick={handleNavToggle} />
+        </C.StyledMenu>
+    )
 }
-  return (
-    <C.Nav>
-      {open && <button onClick={toggleMenu}>Aperto</button>}
-      <Link to="/">Home</Link>
-      <Link to="/games">Games</Link>
-      <Link to="/news">News</Link>
-    </C.Nav>
-  )
-}
+
 export default Menu

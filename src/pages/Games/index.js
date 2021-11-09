@@ -1,5 +1,13 @@
+import Header from "../../components/Header"
+
 function Games() {
-    return <h2>Games</h2>;
+    return (
+        <main>
+            <Header/>
+            <h2>Games</h2>;
+            <section>Conteudo</section>
+        </main>
+    )
 }
 
 export default Games
