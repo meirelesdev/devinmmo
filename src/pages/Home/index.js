@@ -1,12 +1,12 @@
-import Header from "../../components/Header";
+import { Banner } from "../../components/Banner";
+import Layout from "../../components/Layout";
+import { SectionGames } from "../../components/SectionGames";
 
 function Home() {
     return (
-        <main>
-            <Header/>
-            <h2>Home</h2>;
-            <section>Conteudo</section>
-        </main>
+        <Layout title="Home" banner={<Banner/>}>
+            <SectionGames/>
+        </Layout>
     );
 }
 

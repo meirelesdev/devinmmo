@@ -1,30 +1,15 @@
 import React from "react"
-import {
-  BrowserRouter,
-  Switch,
-  Route
-} from "react-router-dom"
+import { AppTheme } from './contexts/themContext'
+import { GlobalStyles } from './styles/GlobalStyles'
+import AppRoutes from './routes'
 import 'animate.css'
-import Home from "./pages/Home"
-import News from './pages/News'
-import Games from './pages/Games'
-import Header from "./components/Header"
+
+const App = props => (
+  <AppTheme>
+      <GlobalStyles/>
+      <AppRoutes />
+  </AppTheme>
+)
 
 
-export default function App() {
-  return (
-    <BrowserRouter>
-        <Switch>
-          <Route path="/games">
-            <Games />
-          </Route>
-          <Route path="/news">
-            <News />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-    </BrowserRouter>
-  )
-}
+export default App

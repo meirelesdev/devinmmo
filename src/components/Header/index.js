@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import MenuMobile from '../MenuMobile'
 import Menu from '../Menu'
-import Toggle from '../Menu/toggle'
+import Toggle from '../MenuMobile/toggle'
 import * as C from './Styles'
-import { BsSearch } from "react-icons/bs";
+
 
 const Header = props => {
     const [open, setOpen] = useState(false)
@@ -17,10 +18,8 @@ const Header = props => {
             <div className="logo">
                 <Link to="/">DEVinMMO</Link>
             </div>
-            <div>
-                <BsSearch />
-            </div>
-            {open && <Menu handleNavToggle={toggleMenu} />}
+            {open && <MenuMobile handleNavToggle={toggleMenu} />}
+            <Menu />
         </C.Header>
     )
 }

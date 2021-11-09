@@ -1,12 +1,10 @@
-import Header from "../../components/Header";
+import Layout from "../../components/Layout";
 
 function News() {
     return (
-        <main>
-            <Header/>
-            <h2>News</h2>
-            <section>Conteudo</section>
-        </main>
+        <Layout title="News">
+            <div><p>Conteudo da News</p></div>
+        </Layout>
     );
 }
 export default News

@@ -1,12 +1,11 @@
 import * as C from './Styles'
 
-const Menu = ({ handleNavToggle }) => {
+const Menu = props => {
     return (
         <C.StyledMenu>
-            <C.StyledLink className="animate__animated animate__fadeInRight" to="/">Home</C.StyledLink>
-            <C.StyledLink className="animate__animated animate__fadeInRight" to="/games">Games</C.StyledLink>
-            <C.StyledLink className="animate__animated animate__fadeInRight" to="/news">News</C.StyledLink>
-            <C.CloseToggle className="animate__animated animate__fadeInRight" onClick={handleNavToggle} />
+            <C.StyledLink to="/">Home</C.StyledLink>
+            <C.StyledLink to="/games">Games</C.StyledLink>
+            <C.StyledLink to="/news">News</C.StyledLink>
         </C.StyledMenu>
     )
 }

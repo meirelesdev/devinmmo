@@ -1,12 +1,11 @@
-import Header from "../../components/Header"
+import Layout from "../../components/Layout"
+import { SectionGames } from "../../components/SectionGames"
 
 function Games() {
     return (
-        <main>
-            <Header/>
-            <h2>Games</h2>;
-            <section>Conteudo</section>
-        </main>
+        <Layout title="Games">
+            <SectionGames />
+        </Layout>
     )
 }
 
