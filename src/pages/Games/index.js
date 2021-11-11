@@ -1,12 +1,19 @@
-import Layout from "../../components/Layout"
-import { SectionGames } from "../../components/SectionGames"
+import { useEffect } from "react";
+import { Banner } from "../../components/Banner";
+import Layout from "../../components/Layout";
+import SectionGames from "../../components/SectionGames";
+import { useGames } from "../../contexts/gamesContext";
 
-function Games() {
+const Games = () => {
+    const { gamesData, handleLoadGames } = useGames()
+    useEffect(()=>{
+        handleLoadGames()
+    }, [])
     return (
-        <Layout title="Games">
-            <SectionGames />
+        <Layout title="Games" banner={<Banner />}>
+            <SectionGames games={gamesData} />
         </Layout>
-    )
+    );
 }
 
 export default Games

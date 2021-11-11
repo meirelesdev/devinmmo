@@ -1,15 +1,23 @@
-import { CardGame } from "../CardGame"
+import styled from "styled-components"
+import CardGame from "../CardGame"
 
-export const SectionGames = props => {
+const ContainerGame = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding: 2%; */
+    margin: 0 auto;
+    max-width: 1260px;
+    gap: 20px;
+`
+const SectionGames = ({games}) => {
     return (
-        <section>
-            {props.games > 0 && (
-                props.games.map((game, index) => (
-                    <CardGame key={index} game={game} />
-                ))
-            )
-            }
-        </section>
+        <ContainerGame>
+            {games && games.map((game) => (
+                <CardGame key={game.id} game={game} />
+            ))}
+        </ContainerGame>
     )
 }
 
+export default SectionGames

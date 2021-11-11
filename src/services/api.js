@@ -2,8 +2,8 @@ import axios from "axios";
 import { config } from '../configs/config'
 
 const api = axios.create({
-    baseURl: 'https://mmo-games.p.rapidapi.com'
+    baseURL: process.env.REACT_APP_API,
+    headers: config
 })
-api.defaults.headers = config
 
 export default api
