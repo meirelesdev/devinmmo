@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Projeto 02 DevinHouse
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositorio foi criado para adicionar o projeto 02 desenvolvido no curso DevinHouse.
 
-## Available Scripts
+- [Projeto DEVinMMO > DEMO OnLine](https://devinmmo.netlify.app/)
+<p align="center">	
+   <a href="https://www.linkedin.com/in/developer-danielmn/">
+      <img alt="Daniel Meireles" src="https://img.shields.io/badge/-Daniel Meireles-0080000?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+  <img alt="Repository size" src="https://img.shields.io/github/languages/code-size/meirelesdev/devinmmo?color=0080000label=repo%20size">
 
-In the project directory, you can run:
 
-### `npm start`
+  <a href="https://github.com/meirelesdev/devinmmo/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/meirelesdev/devinmmo?color=0080000">
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# :pushpin: Índice
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Sobre](#sobre)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Imagens](#imagens)
 
-### `npm test`
+<a id="sobre"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :bookmark: Sobre
 
-### `npm run build`
+O <strong>Projeto DEVinMMO</strong> é o segundo projeto da Turma teltec e BRy do Dev in House, desenvolvido para teste e pratica dos conhecimento aprendidos na primeira parte do curso e tem o objetivo de avaliar o aluno e possui o peso de 40% sobre a avaliação do módulo 1.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a id="tecnologias-utilizadas"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :rocket: Tecnologias Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O projeto aqui disposto foi desenvolvido utilizando as seguintes tecnologias:
 
-### `npm run eject`
+- [HTML](https://www.w3schools.com/html/default.asp)
+- [CSS](https://www.w3schools.com/css/default.asp)
+- [JAVASCRIPT](https://www.w3schools.com/js/default.asp)
+- [ReacJS](https://pt-br.reactjs.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<a id="imagens"></a>
+## :bookmark: Imagens
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Responsividade                     |                                           Alertas dinâmicos ao usuário
+:---------------------------------:|:---------------------------------------------------------------------:
+<!-- ![Layout Responsivo](screenshot/screenshot_1.png?raw=true "Responsividade") | ![Layout Responsivo](screenshot/screenshot_2.png "Alertas dinâmicos ao usuário") -->
+<!-- ### Layout Agradável -->
+<!-- ![Layout Responsivo](screenshot/screenshot.png?raw=true "Layout Agradável") -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h4 align="center">
+    Feito com ❤️ by <a href="https://www.linkedin.com/in/developer-danielmn/" target="_blank">Daniel Meireles</a>
+</h4>
