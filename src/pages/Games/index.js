@@ -16,7 +16,7 @@ const PageGames = () => {
     let clazz = searchIcon ? '' : 'hide'
     return (
         <Layout title="Games"  isHome={false}>
-            <TitleContent pageTitle="Todos os Jogos" >
+            <TitleContent pageTitle={`Todos os Jogos ( ${allGames.length} )`} >
                 <Search 
                     searchIcon={searchIcon}
                     show={clazz}
