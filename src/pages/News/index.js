@@ -23,7 +23,7 @@ const PageNews = () => {
                     value={searchValue}
                     onChange={heandleSearchNews}
                     onBlur={handleInputSearchVisible}
-                    placeholder="Buscar Notícias..."
+                    placeholder="Buscar por titulo ou descrição"
                 />
             </TitleContent>
             <SectionNews news={newsData} />

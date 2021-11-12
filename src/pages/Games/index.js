@@ -16,17 +16,17 @@ const PageGames = () => {
     let clazz = searchIcon ? '' : 'hide'
     return (
         <Layout title="Games"  isHome={false}>
-                <TitleContent pageTitle="Todos os Jogos" >
-                    <Search 
-                        searchIcon={searchIcon}
-                        show={clazz}
-                        handleIcon={handleInputSearchVisible}
-                        value={searchValue}
-                        onChange={heandleSearchGames}
-                        onBlur={handleInputSearchVisible}
-                        placeholder="Buscar Jogos..."
-                        />
-                </TitleContent>
+            <TitleContent pageTitle="Todos os Jogos" >
+                <Search 
+                    searchIcon={searchIcon}
+                    show={clazz}
+                    handleIcon={handleInputSearchVisible}
+                    value={searchValue}
+                    onChange={heandleSearchGames}
+                    onBlur={handleInputSearchVisible}
+                    placeholder="Buscar por titulo ou descrição"
+                    />
+            </TitleContent>
             <SectionGames games={allGames} />
         </Layout>
     );

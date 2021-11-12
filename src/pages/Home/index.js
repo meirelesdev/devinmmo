@@ -10,17 +10,15 @@ const PageHome = () => {
     const { newsData } = useNews()
 
     const games = allGames.slice(0, 8)
-    const news = newsData.slice(0, 5)
+    const news = newsData.slice(0, 6)
     return (
         <Layout pageTitle="Home" isHome={true}>
+            <br/>
             <TitleContent pageTitle="Últimos Games Lançamentos" />
             <br/>
-            <br/>
-            <br/>
             <SectionGames games={games} />
+            <br/>
             <TitleContent pageTitle="Últimas Notícias" />
-            <br/>
-            <br/>
             <br/>
             <SectionNews news={news} />
         </Layout>

@@ -10,7 +10,7 @@ const GamesProvider = ({ children }) => {
     const [ searchValue, setSearchValue ] = useState('')
         
     const filteredGames = !!searchValue ? allGames.filter(game => {
-        return game.title.toLowerCase().includes(searchValue.toLowerCase()) || game.short_description.toLowerCase().includes(searchValue.toLowerCase()) || game.platform.toLowerCase().includes(searchValue.toLowerCase())
+        return game.title.toLowerCase().includes(searchValue.toLowerCase()) || game.short_description.toLowerCase().includes(searchValue.toLowerCase())
     }) : games
         
     const getAllGames = async () => {
