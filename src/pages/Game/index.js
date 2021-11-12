@@ -7,7 +7,7 @@ const PageGame = props => {
     console.log(id)
     return (
         <Layout title="Game Single" isHome={false}>
-            <div><p>Conteudo da Game Sngle</p></div>
+            <div><p>Pagina para montar a descrição de cada jogo</p></div>
         </Layout>
     )
 }
