@@ -13,6 +13,7 @@ export const lightTheme = {
         shadow: {
             text: '10px 10px 10px #FFFFFF',
             primary:'5px 5px 13px 3px #000000',
+            white:'0px 0px 5px 2px #FFFFFF',
             secondary:''
         }
     },
@@ -21,7 +22,8 @@ export const lightTheme = {
         plataform: '2px solid #014479'
     },
     zoom: {
-        card: 'scale(1.09)'
+        cardGame: 'scale(1.09)',
+        cardNews: 'scale(1.01)'
     }
     
 }

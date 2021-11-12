@@ -8,12 +8,12 @@ export const Card = styled.div`
     background-color: ${({ theme }) => theme.colors.background.card};
     border-radius: 10px;
     max-width: 300px;
-    cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
     transition: 300ms all ease-in-out;
+    overflow: hidden;
 
     &:hover {
-        transform: ${({theme}) => theme.zoom.card};
+        transform: ${({theme}) => theme.zoom.cardGame};
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     }
 
@@ -44,9 +44,11 @@ export const GamePlataform = styled.span`
     margin-bottom: 10px;
 `
 export const GameFooter = styled.div`
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     padding: 2%;
 `
 export const GameDescription = styled.p`

@@ -1,12 +1,10 @@
-import { Banner } from "../Banner"
 import Header from "../Header"
 import * as C from './Styles'
 
-const Layout = ({ children, banner }) => {
+const Layout = ({ children,  isHome }) => {
     return (
         <main>
-            <Header />
-            {banner && <Banner />}
+            <Header show={isHome}/>
             <C.Section>
                 {children}
             </C.Section>

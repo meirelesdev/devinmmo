@@ -14,7 +14,7 @@ export const StyledMenu = styled.div`
     
 `
 export const StyledLink = styled(Link)`
-color: #222;
+    color: #222;
     text-decoration: none;
     font-size: clamp(1em, 2vw, 3vw);
     border-radius: 5px;

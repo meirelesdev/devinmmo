@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { Banner } from "../../components/Banner";
 import Layout from "../../components/Layout";
 import TitleContent from "../../components/PageTitle";
 import SectionGames from "../../components/SectionGames";
@@ -7,21 +5,26 @@ import SectionNews from "../../components/SectionNews";
 import { useGames } from "../../contexts/gamesContext";
 import { useNews } from "../../contexts/newsContext";
 
-const Home = () => {
-    const { gamesData, handleLoadGames } = useGames()
-    const { newsData, handleLoadNews } = useNews()
-    useEffect(()=>{
-        handleLoadGames(0, 4)
-        handleLoadNews(0, 4)
-    }, [])
+const PageHome = () => {
+    const { allGames } = useGames()
+    const { newsData } = useNews()
+
+    const games = allGames.slice(0, 8)
+    const news = newsData.slice(0, 5)
     return (
-        <Layout pageTitle="Home" banner={<Banner />}>
+        <Layout pageTitle="Home" isHome={true}>
             <TitleContent pageTitle="Últimos Games Lançamentos" />
-            <SectionGames games={gamesData} />
+            <br/>
+            <br/>
+            <br/>
+            <SectionGames games={games} />
             <TitleContent pageTitle="Últimas Notícias" />
-            <SectionNews news={newsData} />
+            <br/>
+            <br/>
+            <br/>
+            <SectionNews news={news} />
         </Layout>
     );
 }
 
-export default Home
+export default PageHome

@@ -5,19 +5,17 @@ import Menu from '../Menu'
 import Toggle from '../MenuMobile/toggle'
 import * as C from './Styles'
 
-
-const Header = props => {
-    const [open, setOpen] = useState(false)
+const Header = (props) => {    
+    const [open, setOpen] = useState(false)    
     const toggleMenu = () => {
         setOpen(prev => !prev)
-    }
-
+    }    
     return (
         <C.Header>
             <Toggle handleNavToggle={toggleMenu} />
-            <div className="logo">
+            <C.Logo className="logo">
                 <Link to="/">DEVinMMO</Link>
-            </div>
+            </C.Logo>
             {open && <MenuMobile handleNavToggle={toggleMenu} />}
             <Menu />
         </C.Header>

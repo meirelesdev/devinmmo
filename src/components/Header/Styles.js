@@ -1,5 +1,6 @@
 import styled from "styled-components"
 
+
 export const Header = styled.header`
     display: flex;
     justify-content: space-between;
@@ -19,5 +20,10 @@ export const Header = styled.header`
         color: unset;
         letter-spacing: 1px;
         
+    }
+`
+export const Logo = styled.div`
+    & a {
+        font-size: 30pt;
     }
 `

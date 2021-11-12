@@ -23,13 +23,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.container-games {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2%;
-  margin: 0 auto;
-  max-width: 1024px;
-  gap: 20px;
-} 
 `;

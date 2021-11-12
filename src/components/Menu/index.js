@@ -3,9 +3,9 @@ import * as C from './Styles'
 const Menu = props => {
     return (
         <C.StyledMenu>
-            <C.StyledLink to="/">Home</C.StyledLink>
-            <C.StyledLink to="/games">Games</C.StyledLink>
-            <C.StyledLink to="/news">News</C.StyledLink>
+            <C.StyledLink to="/">Início</C.StyledLink>
+            <C.StyledLink to="/games">Jogos</C.StyledLink>
+            <C.StyledLink to="/news">Notícias</C.StyledLink>
         </C.StyledMenu>
     )
 }

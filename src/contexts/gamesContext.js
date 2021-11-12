@@ -5,32 +5,41 @@ import api from '../services/api'
 const GamesContex = createContext()
 
 const GamesProvider = ({ children }) => {
-    const [gamesData, setGamesData] = useState()
-    const [pageGames, setPageGames] = useState(0)
-    const [gamesPerPage, setGamesPerPage] = useState(4)    
-    
-    const handleLoadGames = useCallback(async(page, gamesPerPage)=>{
-        setPageGames(page)
-        setGamesPerPage(gamesPerPage)
-        const games = await getAllGames()
-        const filteredGames = games.slice(page, gamesPerPage)
-        setGamesData(filteredGames)
-    })
-    
+    const [ games , setGames ] = useState([])
+    const [ allGames, setAllGames ] = useState([])
+    const [ searchValue, setSearchValue ] = useState('')
+        
+    const filteredGames = !!searchValue ? allGames.filter(game => {
+        return game.title.toLowerCase().includes(searchValue.toLowerCase()) || game.short_description.toLowerCase().includes(searchValue.toLowerCase()) || game.platform.toLowerCase().includes(searchValue.toLowerCase())
+    }) : games
+        
     const getAllGames = async () => {
         const res = await api.get('games')
         return res.data
     }
     
-    useEffect(()=>{
-        handleLoadGames(pageGames, gamesPerPage)
-    }, [pageGames, gamesPerPage])
+    const handleLoadGames = useCallback(async () => {
+        const gamesData = await getAllGames()
+        setGames([...gamesData])
+        setAllGames(gamesData)
+    }, [])
 
+    useEffect(()=>{
+        handleLoadGames()
+    }, [handleLoadGames])
+
+    const heandleSearchGames = (e) => {
+        const { value } = e.target
+        setSearchValue(c => value)
+    }
+    const clearSerchValueGames = ()=>{
+        setSearchValue('')
+    }
     const data = { 
-        gamesData,
-        handleLoadGames, 
-        setPageGames,
-        setGamesPerPage,
+        allGames: filteredGames,
+        searchValue,
+        heandleSearchGames,
+        clearSerchValueGames
      }
     return (
         <GamesContex.Provider value={data}>
@@ -41,7 +50,7 @@ const GamesProvider = ({ children }) => {
 const useGames = () => {
     const context = useContext(GamesContex)
     if (context === undefined) {
-        throw new Error("Sem Contexto")
+        throw new Error("Contexto dos Jogos não disponivel")
     }
     return context
 }
