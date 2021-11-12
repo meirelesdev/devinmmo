@@ -1,5 +1,4 @@
-import { createContext, useState, useContext, useCallback } from 'react'
-import { useEffect } from 'react/cjs/react.development'
+import { createContext, useState, useEffect, useContext, useCallback } from 'react'
 import api from '../services/api'
 
 const GamesContex = createContext()

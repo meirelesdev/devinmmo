@@ -1,4 +1,4 @@
-import {useEffect, createContext, useState, useContext, useCallback } from 'react'
+import { useEffect, createContext, useState, useContext, useCallback } from 'react'
 import api from '../services/api'
 
 const NewsContex = createContext()
