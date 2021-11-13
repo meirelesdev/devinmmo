@@ -3,27 +3,39 @@ import styled from "styled-components"
 
 export const Header = styled.header`
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100px;
+    flex-direction: column;
     background-color: ${({ theme }) => theme.colors.background.header};
-    color: white;
+    color: ${({theme})=> theme.colors.text.white};
     font-weight: 800;
+    box-shadow: ${({ theme }) => theme.colors.shadow.header.primary};
+    margin-bottom: 10px ;
 
     .logo {
-        padding: 10px;
-        margin: 10px;
+        margin-top: 20px;
+        margin-left: 10px;
     }
     .logo a{
-        font-size: 15pt;
+        /* font-size: 15pt; */
+        font-weight: 800;
         text-decoration: none;        
-        color: unset;
-        letter-spacing: 1px;
+        color: ${({theme})=> theme.colors.text.white};
+        text-shadow: ${({theme})=> theme.colors.shadow.text};
         
+    }
+    @media (min-width: 425px) {
+        flex-direction: row;
+        min-height: 100px;
+    }
+    @media (min-width: 768px) {
+        justify-content: space-evenly;
+        align-items: center;
+        .logo {
+            margin-top: unset ;
+        }
     }
 `
 export const Logo = styled.div`
     & a {
-        font-size: 30pt;
+        font-size: 25pt;
     }
 `

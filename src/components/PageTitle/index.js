@@ -2,6 +2,7 @@ import styled from "styled-components"
 const StyledTitle = styled.div`
     width: 100%;
     margin: auto;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +10,7 @@ const StyledTitle = styled.div`
     flex-wrap: wrap;
     max-width: 1200px;
     & > h1 {
+        font-weight: 600;
         text-shadow: ${({theme}) => theme.colors.shadow.text};
     }
 
@@ -24,8 +26,8 @@ const StyledTitle = styled.div`
 const TitleContent = ({pageTitle, children}) => {
     return (
         <StyledTitle>
-            <h1>{pageTitle}</h1>
             {children}
+            <h1>{pageTitle}</h1>
         </StyledTitle>
     )
 }

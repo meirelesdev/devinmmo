@@ -27,9 +27,10 @@ export const NewsContent = styled(GameContent)`
 
 `
 export const CardImageNews = styled(CardImage)`
+    height: auto;
+    
     @media (min-width: 940px) {
         width: 50%;
-        height: 100%;
         margin: 0;
     }
 `
@@ -40,13 +41,20 @@ export const NewsTitle = styled(GameTitle)`
     @media (min-width: 940px) {
         margin: 30px;
     }
-
 `
 export const NewsDescription = styled(GameDescription)`
         padding: 20px;
 `
 export const NewsLink = styled(GameLink)`
+    
     margin: 0 auto;
+
+    &:hover {
+        box-shadow: ${({theme})=>theme.colors.shadow.soft};
+        background-color: ${({theme})=>theme.colors.background.primary};
+        color: ${({theme})=>theme.colors.text.primary};
+    }
+
     @media (min-width: 940px) {
         margin: unset;
     }

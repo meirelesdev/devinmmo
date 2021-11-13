@@ -8,7 +8,6 @@ const CardNews = ({news}) => {
                 <C.NewsTitle>{news.title}</C.NewsTitle>
                 <C.NewsDescription>{news.short_description}</C.NewsDescription>
                 <C.Buttons>
-                    <C.NewsLink to={`/news/${news.id}`} >VER MAIS</C.NewsLink>
                     <C.NewsLink to={{pathname: news.article_url}} target="_blank">VER NO SITE OFFICIAL</C.NewsLink>
                 </C.Buttons>
             </C.NewsContent>

@@ -1,3 +1,4 @@
+import React from "react"
 import styled from "styled-components"
 import CardGame from "../CardGame"
 
@@ -19,4 +20,4 @@ const SectionGames = ({games}) => {
     )
 }
 
-export default SectionGames
+export default React.memo(SectionGames)

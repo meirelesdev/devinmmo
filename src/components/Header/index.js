@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import MenuMobile from '../MenuMobile'
 import Menu from '../Menu'
 import Toggle from '../MenuMobile/toggle'
-import * as C from './Styles'
 
-const Header = (props) => {    
-    const [open, setOpen] = useState(false)    
+import * as C from './Styles'
+import ToggleTheme from '../ToggleTheme'
+
+const Header = () => {    
+    const [open, setOpen] = useState(false)
     const toggleMenu = () => {
         setOpen(prev => !prev)
     }    
@@ -16,6 +18,7 @@ const Header = (props) => {
             <C.Logo className="logo">
                 <Link to="/">DEVinMMO</Link>
             </C.Logo>
+            <ToggleTheme/>
             {open && <MenuMobile handleNavToggle={toggleMenu} />}
             <Menu />
         </C.Header>

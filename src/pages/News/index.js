@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Layout from "../../components/Layout";
+import Layout from '../../template/Layout'
 import TitleContent from "../../components/PageTitle";
 import Search from "../../components/Search";
 import SectionNews from "../../components/SectionNews";
@@ -15,7 +15,7 @@ const PageNews = () => {
     let clazz = searchIcon ? '' : 'hide'
     return (
         <Layout title="News" isHome={false}>
-            <TitleContent pageTitle="Todas Notícias" >
+            <TitleContent pageTitle={searchValue.length > 0 ? `Resultado para "${searchValue}" ( ${newsData.length} )`  : `Todos os Jogos ( ${newsData.length} )` } >
                 <Search
                     searchIcon={searchIcon}
                     show={clazz}

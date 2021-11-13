@@ -1,9 +1,11 @@
 import axios from "axios";
-import { config } from '../configs/config'
-
 const api = axios.create({
     baseURL: process.env.REACT_APP_API,
-    headers: config
+    headers: {
+        'Countent-Type':'application/json',
+        'x-rapidapi-host':process.env.REACT_APP_RAPIDAPI_HOST,
+        'x-rapidapi-key':  process.env.REACT_APP_RAPIDAPI_KEY,
+    }
 })
 
 export default api

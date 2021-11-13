@@ -6,11 +6,8 @@ const NewsContex = createContext()
 const NewsProvider = ({ children }) => {
     const [ news , setNews ] = useState([])
     const [ allNews, setAllNews ] = useState([])
-    const [ page, setPage ] = useState(0)    
     const [ searchValue, setSearchValue ] = useState('')
-    
-    const newsPerPage = 10
-   
+
     const filteredNews = !!searchValue ? allNews.filter(news => {
         return news.title.toLowerCase().includes(searchValue.toLowerCase()) || news.short_description.toLowerCase().includes(searchValue.toLowerCase())
     }) : news
@@ -18,18 +15,17 @@ const NewsProvider = ({ children }) => {
     const getAllNews = async () => {
         const res = await api.get('latestnews')
         return res.data
-    }
+    }    
     
-    
-    const handleLoadNews = useCallback(async (page, newsPerPage) => {
+    const handleLoadNews = useCallback(async () => {
         const newsData = await getAllNews()
-        setNews(newsData.slice(page, newsPerPage))
+        setNews([...newsData])
         setAllNews(newsData)
     }, [])
 
     useEffect(()=>{
-        handleLoadNews(0, newsPerPage)
-    }, [handleLoadNews, newsPerPage])
+        handleLoadNews()
+    }, [handleLoadNews])
 
     const heandleSearchNews = (e) => {
         const { value } = e.target
@@ -37,22 +33,11 @@ const NewsProvider = ({ children }) => {
     }
     const clearSerchValueNews = ()=>{
         setSearchValue('')
-        console.log("limpando busca noticias")
-    }
-    
-    const loadMoreNews = () => {
-        const nextPage = page + newsPerPage
-        const nextNews = allNews.slice(nextPage, nextPage + newsPerPage)
-        news.push(...nextNews)
-        setNews(news)
-        setPage(nextPage)
-    }
-
+    }    
     const data = { 
         newsData: filteredNews,
         searchValue,
         heandleSearchNews,
-        loadMoreNews,
         clearSerchValueNews
      }
     

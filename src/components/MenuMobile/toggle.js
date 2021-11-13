@@ -5,11 +5,14 @@ const StyledToggle = styled(FaBars)`
     position: fixed;
     top: 2%;
     right: 4%;
-    color: ${({theme}) => theme.colors.text.primary};
     padding: 0.75rem;
     display: flex;
     place-items: center;
     font-size: 4em;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: ${({theme}) => theme.borders.radius};
+    color: ${({theme}) => theme.colors.text.white};
+    z-index: 98;
 
     cursor: pointer;
 

@@ -22,12 +22,13 @@ export const StyledMenu = styled.div`
     align-items: center;
 `
 export const StyledLink = styled(Link)`
-    color: #222;
+    color: ${({theme})=> theme.colors.text.white};
     text-decoration: none;
-    font-size: clamp(3rem, 4vw, 6vw);
+    font-size: clamp(2.5rem, 3vw, 6vw);
     margin:  10px 0; 
     padding: 15px;
-    border-radius: 5px;
+    border-radius: ${({theme}) => theme.borders.radius};
+    border-bottom: 1px solid black;
     transition: 0.2s all ease-in-out;
     
     user-select: none;
@@ -47,11 +48,12 @@ export const CloseToggle = styled(FaTimes)`
     position: fixed;
     top: 5%;
     right: 4%;
-    background-color: #222;
-    color: #fff;
     padding: .75rem;
     display: flex;
     place-items: center;
     font-size: 3rem;
     cursor: pointer;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: ${({theme}) => theme.borders.radius};
+    color: ${({theme}) => theme.colors.text.white};
 `

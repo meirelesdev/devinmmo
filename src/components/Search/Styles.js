@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { TextInput } from "../FormComment/Styles";
 import { RiSearch2Line } from 'react-icons/ri';
 
 
@@ -18,14 +19,19 @@ export const ContainerSearch = styled.div`
         flex: 1;
     }
 `
-export const InputSearch = styled.input`
+export const InputSearch = styled(TextInput)`
     padding: 10px;
     border: 3px;
-    border-radius: 5px;    
+    border-radius: ${({theme}) => theme.borders.radius};
+    background-color: ${({theme}) => theme.colors.background.inputs};
     margin: 5px;
     width: 100%;
     transition: 0.3s all ease-in-out;
     outline: none;
+
+    &::placeholder {
+        color: ${({theme}) => theme.colors.text.placeholder}
+    }
 
     &.hide {
         width: 1px;
@@ -35,11 +41,6 @@ export const InputSearch = styled.input`
 `
 export const SearchIcon = styled(RiSearch2Line)`
     margin-right: 20px;
-    font-size: 20pt;
-    /* border-radius: 100%; */
-    /* padding: 3px; */
-    /* background: #a1a1a1; */
-    /* box-shadow: ${({ theme }) => theme.colors.shadow.white}; */
-    /* color: ${({ theme }) => theme.colors.text.primary}; */
+    font-size: 25pt;
 
 `

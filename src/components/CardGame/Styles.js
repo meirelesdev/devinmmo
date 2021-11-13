@@ -8,7 +8,7 @@ export const Card = styled.div`
     background-color: ${({ theme }) => theme.colors.background.card};
     border-radius: 10px;
     max-width: 300px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    box-shadow: ${({ theme }) => theme.colors.shadow.primary};
     transition: 300ms all ease-in-out;
     overflow: hidden;
 
@@ -63,4 +63,10 @@ export const GameLink = styled(Link)`
     border: ${({theme})=>theme.borders.default};
     border-radius: 3px;
     padding: 5px;
+
+    &:hover {
+        box-shadow: ${({theme})=>theme.colors.shadow.soft};
+        background-color: ${({theme})=>theme.colors.background.primary};
+        color: ${({theme})=>theme.colors.text.primary};
+    }
 `

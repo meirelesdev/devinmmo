@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from '../../template/Layout'
 import TitleContent from "../../components/PageTitle";
 import SectionGames from "../../components/SectionGames";
 import SectionNews from "../../components/SectionNews";
@@ -9,7 +9,7 @@ const PageHome = () => {
     const { allGames } = useGames()
     const { newsData } = useNews()
 
-    const games = allGames.slice(0, 8)
+    const games = allGames.slice(0, 4)
     const news = newsData.slice(0, 6)
     return (
         <Layout pageTitle="Home" isHome={true}>

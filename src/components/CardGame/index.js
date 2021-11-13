@@ -1,7 +1,7 @@
 import * as C from './Styles'
 
 const CardGame = ({game}) => {
-    const plataforms = game.platform.split(',')    
+    const plataforms = game.platform.split(',')
     return (
         <C.Card>
             <C.GameContent>

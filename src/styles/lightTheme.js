@@ -2,39 +2,39 @@ export const lightTheme = {
     colors: {
         background: {
             primary: '#d2d9d6',
-            secondary: '#d2d9d6',
-            header: "#818483",
+            secondary: '#fff',
+            header: '#d2d9d6',
+            inputs: '#c7c3c3',
             card: "#FFF",
         },
         text: {
             primary: '#5c5f63',
-            secondary: '#D2D9D6'
+            secondary: '#D2D9D6',
+            black: 'white;',
+            white: 'black;',
+            placeholder: 'rgba(0,0,0,0.3);'
         },
         shadow: {
-            text: '10px 10px 10px #FFFFFF',
-            primary:'5px 5px 13px 3px #000000',
-            white:'0px 0px 5px 2px #FFFFFF',
-            secondary:''
+            text: '5px 5px 5px rgba(0,0,0, 0.5);',
+            primary:'3px 3px 20px 1px rgba(0,0,0, 0.5);',
+            soft:'3px 3px 10px 1px rgba(0,0,0, 0.5);',
+            white:'0px 0px 5px 2px #FFFFFF;',
+            footer: {
+                primary: '0px 0px 20px white;',
+            },
+            header: {
+                primary: '0px 0px 20px white;',
+            },
         }
     },
     borders: {
         default: '1px solid #014479',
-        plataform: '2px solid #014479'
+        plataform: '2px solid #014479',
+        radius: '5px;'
     },
+
     zoom: {
         cardGame: 'scale(1.09)',
         cardNews: 'scale(1.01)'
-    }
-    
+    }    
 }
-
-// :root {
-//     --color-primary: #392061;
-//     --color-secondary: #9D75CB
-  
-//     --color-bg-primary: #D00000;
-//     --color-bg-seconday: #C9E4CA;
-  
-//     --color-box-shadow: #49a9a6;
-  
-//   }
