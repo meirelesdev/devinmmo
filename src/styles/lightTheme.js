@@ -20,10 +20,10 @@ export const lightTheme = {
             soft:'3px 3px 10px 1px rgba(0,0,0, 0.5);',
             white:'0px 0px 5px 2px #FFFFFF;',
             footer: {
-                primary: '0px 0px 20px white;',
+                primary: '0px 0px 20px black;',
             },
             header: {
-                primary: '0px 0px 20px white;',
+                primary: '0px 0px 20px black;',
             },
         }
     },

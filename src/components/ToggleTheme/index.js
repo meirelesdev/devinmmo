@@ -1,6 +1,6 @@
 import { MdModeNight, MdLightMode } from "react-icons/md";
 import * as C from './Styles'
-import { useThemeToggler } from '../../contexts/themContext'
+import { useThemeToggler } from '../../contexts/themeContext'
 
 const ToggleTheme = () => {
     const { isDark, toggleTheme } = useThemeToggler()

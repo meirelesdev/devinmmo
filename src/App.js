@@ -1,22 +1,20 @@
 import React from "react"
-import { AppTheme } from './contexts/themContext'
+import { AppTheme } from './contexts/themeContext'
 import { GlobalStyles } from './styles/GlobalStyles'
 import AppRoutes from './routes'
 import 'animate.css'
-import { GamesProvider } from "./contexts/gamesContext"
-import { NewsProvider } from "./contexts/newsContext"
+import { DataProvider } from "./contexts/dataContext"
+
 import CommentsProvider from "./hooks/useComments";
 
 const App = () => (
   <AppTheme>
-      <GlobalStyles/>
-      <GamesProvider>
-        <NewsProvider>
-        <CommentsProvider>
-            <AppRoutes />
-          </CommentsProvider>
-        </NewsProvider>
-      </GamesProvider>        
+    <GlobalStyles />
+    <DataProvider>
+      <CommentsProvider>
+        <AppRoutes />
+      </CommentsProvider>
+    </DataProvider>
   </AppTheme>
 )
 

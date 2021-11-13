@@ -3,10 +3,10 @@ import Layout from '../../template/Layout'
 import TitleContent from "../../components/PageTitle";
 import Search from "../../components/Search";
 import SectionNews from "../../components/SectionNews";
-import { useNews } from "../../contexts/newsContext";
+import { useData } from "../../contexts/dataContext";
 
 const PageNews = () => {
-    const { newsData, searchValue, heandleSearchNews } = useNews()
+    const { newsData, searchValueNews, heandleSearchNews } = useData()
     const [searchIcon, setSearchIcon] = useState(false)
 
     const handleInputSearchVisible = ()=>{
@@ -15,12 +15,12 @@ const PageNews = () => {
     let clazz = searchIcon ? '' : 'hide'
     return (
         <Layout title="News" isHome={false}>
-            <TitleContent pageTitle={searchValue.length > 0 ? `Resultado para "${searchValue}" ( ${newsData.length} )`  : `Todos os Jogos ( ${newsData.length} )` } >
+            <TitleContent pageTitle={searchValueNews.length > 0 ? `Resultado para "${searchValueNews}" ( ${newsData.length} )`  : `Todos os Jogos ( ${newsData.length} )` } >
                 <Search
                     searchIcon={searchIcon}
                     show={clazz}
                     handleIcon={handleInputSearchVisible}
-                    value={searchValue}
+                    value={searchValueNews}
                     onChange={heandleSearchNews}
                     onBlur={handleInputSearchVisible}
                     placeholder="Buscar por titulo ou descrição"

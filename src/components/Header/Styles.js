@@ -15,7 +15,6 @@ export const Header = styled.header`
         margin-left: 10px;
     }
     .logo a{
-        /* font-size: 15pt; */
         font-weight: 800;
         text-decoration: none;        
         color: ${({theme})=> theme.colors.text.white};

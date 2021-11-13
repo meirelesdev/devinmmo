@@ -19,10 +19,10 @@ export const darkTheme = {...lightTheme,
             primary:'3px 3px 20px 1px rgba(255,255,255, 0.5);',
             soft:'3px 3px 10px 1px rgba(255,255,255, 0.5);',
             footer: {
-                primary: '0px 0px 20px black;',
+                primary: '0px 0px 20px white;',
             },
             header: {
-                primary: '0px 0px 20px black;',
+                primary: '0px 0px 20px white;',
             },
         }
     }

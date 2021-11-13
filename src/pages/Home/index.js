@@ -2,12 +2,10 @@ import Layout from '../../template/Layout'
 import TitleContent from "../../components/PageTitle";
 import SectionGames from "../../components/SectionGames";
 import SectionNews from "../../components/SectionNews";
-import { useGames } from "../../contexts/gamesContext";
-import { useNews } from "../../contexts/newsContext";
+import { useData } from "../../contexts/dataContext";
 
 const PageHome = () => {
-    const { allGames } = useGames()
-    const { newsData } = useNews()
+    const { allGames, newsData } = useData()
 
     const games = allGames.slice(0, 4)
     const news = newsData.slice(0, 6)
