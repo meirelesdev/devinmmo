@@ -42,7 +42,9 @@ const DataProvider = ({ children }) => {
     }, [])
 
     useEffect(()=>{
-        handleLoadGames()
+        setInterval(()=>{
+            handleLoadGames()
+        }, 3000)
         handleLoadNews()
     }, [handleLoadGames, handleLoadNews])
 

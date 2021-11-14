@@ -10,6 +10,7 @@ const StyledTitle = styled.div`
     flex-wrap: wrap;
     max-width: 1200px;
     & > h1 {
+        margin: 20px;
         font-weight: 600;
         text-shadow: ${({theme}) => theme.colors.shadow.text};
     }

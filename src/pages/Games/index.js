@@ -4,22 +4,21 @@ import SectionGames from "../../components/SectionGames";
 import { useData } from "../../contexts/dataContext";
 import {  useState } from "react";
 import Search from "../../components/Search";
+import LoarderComponent from '../../components/LoaderComponent';
 
 const PageGames = () => {
     const { allGames, searchValueGames, heandleSearchGames } = useData()
-
     const [searchIcon, setSearchIcon] = useState(false)
-
     const handleInputSearchVisible = ()=>{
         setSearchIcon(c => !c)
     }
-
-
     let clazz = searchIcon ? '' : 'hide'
-
     return (
         <Layout title="Games"  isHome={false}>
-            <TitleContent pageTitle={searchValueGames.length > 0 ? `Resultado para "${searchValueGames}" ( ${allGames.length} )`  : `Todos os Jogos ( ${allGames.length} )` } >
+            <TitleContent 
+                    pageTitle={searchValueGames.length > 0 ?
+                        `Resultado para "${searchValueGames}" ( ${allGames.length} )`
+                        :`Todos os Jogos ( ${allGames.length} )`}>
                 <Search 
                     searchIcon={searchIcon}
                     show={clazz}
@@ -30,7 +29,12 @@ const PageGames = () => {
                     placeholder="Buscar por titulo ou descrição"
                     />
             </TitleContent>
-            <SectionGames games={allGames} />
+            {allGames.length === 0 ? (
+                <LoarderComponent />
+            ): (
+                <SectionGames games={allGames} />
+            )}
+            {/* <SectionGames games={allGames} /> */}
         </Layout>
     );
 }

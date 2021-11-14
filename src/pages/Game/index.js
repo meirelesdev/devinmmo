@@ -19,7 +19,6 @@ const PageGame = () => {
     }
     useEffect(() => {
         (async () => {
-            
             try{
                 const response = await api.get('game', { params: { id } })
                 setGame(g => [{ ...response.data }])
