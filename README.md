@@ -42,18 +42,18 @@ O projeto aqui disposto foi desenvolvido utilizando as seguintes tecnologias:
 ## :bookmark: Imagens
 ### Layout Responsivo
 
-![Layout Responsivo](.git/screens/projeto03.gif?raw=true "Responsividade")
+![Layout Responsivo](screens/projeto03.gif?raw=true "Responsividade")
 
 ### Loading...
-![Layout Responsivo](.git/screens/projeto02.gif "Loading")
+![Layout Responsivo](screens/projeto02.gif "Loading")
 ### Troca de Thema
 ---
-![Layout Responsivo](./.git/screens/projeto01.gif?raw=true "Você pode Trocar entre light e dark")
+![Layout Responsivo](screens/projeto01.gif?raw=true "Você pode Trocar entre light e dark")
 ### Busca em tempo Real.
 ---
-![Layout Responsivo](./.git/screens/projeto04.gif?raw=true "Busca em tempo real.")
+![Layout Responsivo](screens/projeto04.gif?raw=true "Busca em tempo real.")
 ### SlideShow
-![Layout Responsivo](./.git/screens/projeto05.gif?raw=true "Show para fotos dos games.")
+![Layout Responsivo](screens/projeto05.gif?raw=true "Show para fotos dos games.")
 
 
 <h4 align="center">
