@@ -12,7 +12,7 @@ const PageHome = () => {
     return (
         <Layout pageTitle="Home" isHome={true}>
             <br/>
-            <TitleContent pageTitle="Últimos Games Lançamentos" />
+            <TitleContent pageTitle="Últimos Lançamentos" />
             <br/>
             <SectionGames games={games} />
             <br/>

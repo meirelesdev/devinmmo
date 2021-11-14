@@ -3,13 +3,12 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme } from "../styles/darkTheme";
 import { lightTheme } from "../styles/lightTheme";
 
-const themeContext = createContext();
-const AppThemeProvider = themeContext.Provider;
+const ThemeContext = createContext();
 
 export const useThemeToggler = () => {
-  const context = useContext(themeContext);
+  const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error("useThemeToggler must be used within an AppThemeProvider.");
+    throw new Error("A troca de thema deve estar dentro do contexto.");
   }
   return context;
 };
@@ -17,27 +16,26 @@ export const useThemeToggler = () => {
 export const AppTheme = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
 
-  useEffect(getFromLocalStorage, []);
-  useEffect(setToLocalStorage, [isDark]);
-
-  function getFromLocalStorage() {
+  const getFromLocalStorage = () => {
     const themeFromLS = localStorage.getItem("darkMode");
     if (themeFromLS) {
       setIsDark(themeFromLS === "true");
     }
   }
-
-  function setToLocalStorage() {
+  const setToLocalStorage = () => {
     return localStorage.setItem("darkMode", isDark);
   }
 
-  function toggleTheme() {
-    setIsDark((d) => !d);
+  useEffect(getFromLocalStorage, []);
+  useEffect(setToLocalStorage, [isDark]);
+
+  const toggleTheme = () => {
+    setIsDark(c => !c);
   }
 
   return (
-    <AppThemeProvider value={{ isDark, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>{children}</ThemeProvider>
-    </AppThemeProvider>
+    </ThemeContext.Provider>
   );
 };

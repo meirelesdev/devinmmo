@@ -1,11 +1,11 @@
 import React from "react"
 import { AppTheme } from './contexts/themeContext'
 import { GlobalStyles } from './styles/GlobalStyles'
-import AppRoutes from './routes'
-import 'animate.css'
 import { DataProvider } from "./contexts/dataContext"
-
 import CommentsProvider from "./hooks/useComments";
+import AppRoutes from './routes'
+
+import 'animate.css'
 
 const App = () => (
   <AppTheme>

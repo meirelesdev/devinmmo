@@ -7,7 +7,6 @@ import Search from "../../components/Search";
 
 const PageGames = () => {
     const { allGames, searchValueGames, heandleSearchGames } = useData()
-    //const [ gamesToShow, setGamesToShow ] = useState([]) // para implementar paginação
 
     const [searchIcon, setSearchIcon] = useState(false)
 
