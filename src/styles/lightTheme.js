@@ -2,6 +2,7 @@ export const lightTheme = {
     colors: {
         background: {
             primary: '#d2d9d6',
+            loader: '#fff',
             secondary: '#fff',
             header: '#d2d9d6',
             inputs: '#c7c3c3',

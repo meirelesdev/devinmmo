@@ -3,6 +3,7 @@ import TitleContent from "../../components/PageTitle";
 import SectionGames from "../../components/SectionGames";
 import SectionNews from "../../components/SectionNews";
 import { useData } from "../../contexts/dataContext";
+import LoarderComponent from '../../components/LoaderComponent';
 
 const PageHome = () => {
     const { allGames, newsData } = useData()
@@ -13,12 +14,17 @@ const PageHome = () => {
         <Layout pageTitle="Home" isHome={true}>
             <br/>
             <TitleContent pageTitle="Últimos Lançamentos" />
-            <br/>
-            <SectionGames games={games} />
-            <br/>
+            {games.length === 0 ? (
+                <LoarderComponent/>
+            ): (
+                <SectionGames games={games} />
+            )}
             <TitleContent pageTitle="Últimas Notícias" />
-            <br/>
-            <SectionNews news={news} />
+            {news.length === 0 ? (
+                <LoarderComponent/>
+            ): (
+                <SectionNews news={news} />
+            )}
         </Layout>
     );
 }

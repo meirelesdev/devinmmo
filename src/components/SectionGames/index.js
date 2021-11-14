@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import CardGame from "../CardGame"
 
-const ContainerGame = styled.section`
+export const ContainerGame = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

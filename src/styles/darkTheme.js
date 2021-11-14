@@ -5,6 +5,7 @@ export const darkTheme = {...lightTheme,
         background: {
             primary: '#2A2F33',
             secondary: '#2A2F33',
+            loader: '#f2f2f2',
             header: '#2A2F33',
             card: "#636262",
         },
