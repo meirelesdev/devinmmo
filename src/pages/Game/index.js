@@ -14,8 +14,9 @@ const PageGame = () => {
     const history = useHistory()
     const { state, dispatch } = useComments()
 
-    const submitComment = (values) => {
+    const submitComment = (values, osSubmitProps) => {
         dispatch({type:'save', payload: values})
+        osSubmitProps.resetForm()
     }
     useEffect(() => {
         (async () => {
