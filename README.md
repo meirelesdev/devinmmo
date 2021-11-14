@@ -3,7 +3,7 @@
 
 Este repositorio foi criado para adicionar o projeto 02 desenvolvido no curso DevinHouse.
 
-- [Projeto DEVinMMO > DEMO OnLine](https://devinmmo.netlify.app/)
+- [Projeto DEVinMMO OnLine esta aqui.](https://devinmmo.netlify.app/)
 <p align="center">	
    <a href="https://www.linkedin.com/in/developer-danielmn/">
       <img alt="Daniel Meireles" src="https://img.shields.io/badge/-Daniel Meireles-0080000?style=flat&logo=Linkedin&logoColor=white" />
@@ -40,12 +40,20 @@ O projeto aqui disposto foi desenvolvido utilizando as seguintes tecnologias:
 
 <a id="imagens"></a>
 ## :bookmark: Imagens
+### Layout Responsivo
 
-Responsividade                     |                                           Alertas dinâmicos ao usuário
-:---------------------------------:|:---------------------------------------------------------------------:
-<!-- ![Layout Responsivo](screenshot/screenshot_1.png?raw=true "Responsividade") | ![Layout Responsivo](screenshot/screenshot_2.png "Alertas dinâmicos ao usuário") -->
-<!-- ### Layout Agradável -->
-<!-- ![Layout Responsivo](screenshot/screenshot.png?raw=true "Layout Agradável") -->
+![Layout Responsivo](.git/screens/projeto03.gif?raw=true "Responsividade")
+
+### Loading...
+![Layout Responsivo](.git/screens/projeto02.gif "Loading")
+### Troca de Thema
+---
+![Layout Responsivo](./.git/screens/projeto01.gif?raw=true "Você pode Trocar entre light e dark")
+### Busca em tempo Real.
+---
+![Layout Responsivo](./.git/screens/projeto04.gif?raw=true "Busca em tempo real.")
+### SlideShow
+![Layout Responsivo](./.git/screens/projeto05.gif?raw=true "Show para fotos dos games.")
 
 
 <h4 align="center">
