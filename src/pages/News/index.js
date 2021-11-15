@@ -6,7 +6,7 @@ import SectionNews from "../../components/SectionNews";
 import { useData } from "../../contexts/dataContext";
 
 const PageNews = () => {
-    const { newsData, searchValueNews, heandleSearchNews } = useData()
+    const { allNews, searchNews, heandleSearch } = useData()
     const [searchIcon, setSearchIcon] = useState(false)
 
     const handleInputSearchVisible = ()=>{
@@ -15,18 +15,19 @@ const PageNews = () => {
     let clazz = searchIcon ? '' : 'hide'
     return (
         <Layout title="News" isHome={false}>
-            <TitleContent pageTitle={searchValueNews.length > 0 ? `Resultado para "${searchValueNews}" ( ${newsData.length} )`  : `Todos os Jogos ( ${newsData.length} )` } >
+            <TitleContent pageTitle={searchNews.length > 0 ? `Resultado para "${searchNews}" ( ${allNews.length} )` : `Total de notícias ( ${allNews.length} )`} >
                 <Search
                     searchIcon={searchIcon}
                     show={clazz}
                     handleIcon={handleInputSearchVisible}
-                    value={searchValueNews}
-                    onChange={heandleSearchNews}
+                    value={searchNews}
+                    onChange={heandleSearch}
                     onBlur={handleInputSearchVisible}
                     placeholder="Buscar por titulo ou descrição"
+                    searchName="searchNews"
                 />
             </TitleContent>
-            <SectionNews news={newsData} />
+            <SectionNews news={allNews} />
         </Layout>
     );
 }

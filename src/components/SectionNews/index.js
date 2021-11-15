@@ -1,3 +1,4 @@
+import React from "react"
 import styled from "styled-components"
 
 import CardNews from "../CardNews"
@@ -17,7 +18,6 @@ const ContainerNews = styled.section`
 
 `
 const SectionNews = ({news}) => {
-
     return (
         <ContainerNews>
             {news && news.map((item, index) => (
@@ -27,4 +27,4 @@ const SectionNews = ({news}) => {
     )
 }
 
-export default SectionNews
+export default React.memo(SectionNews)

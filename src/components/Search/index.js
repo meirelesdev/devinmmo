@@ -3,6 +3,7 @@ import * as C from './Styles'
 
 const Search = (props) => {
     const inputEl = useRef(null)
+    
     const handleBlur = ()=>{
         props.onBlur()
     }
@@ -22,7 +23,7 @@ const Search = (props) => {
                 ref={inputEl}
                 value={props.value}
                 type="search"
-                name="searchInput"
+                name={props.searchName}
                 placeholder={props.placeholder}
                 onChange={props.onChange}
                 onBlur={handleBlur}

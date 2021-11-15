@@ -7,34 +7,35 @@ import Search from "../../components/Search";
 import LoarderComponent from '../../components/LoaderComponent';
 
 const PageGames = () => {
-    const { allGames, searchValueGames, heandleSearchGames } = useData()
+    const { allGames, searchGames, heandleSearch } = useData()
     const [searchIcon, setSearchIcon] = useState(false)
     const handleInputSearchVisible = ()=>{
         setSearchIcon(c => !c)
     }
     let clazz = searchIcon ? '' : 'hide'
+
     return (
         <Layout title="Games"  isHome={false}>
             <TitleContent 
-                    pageTitle={searchValueGames.length > 0 ?
-                        `Resultado para "${searchValueGames}" ( ${allGames.length} )`
-                        :`Todos os Jogos ( ${allGames.length} )`}>
+                    pageTitle={searchGames.length > 0 ?
+                        `Resultado para "${searchGames}" ( ${allGames.length} )`
+                        :`Total de Jogos ( ${allGames.length} )`}>
                 <Search 
                     searchIcon={searchIcon}
                     show={clazz}
                     handleIcon={handleInputSearchVisible}
-                    value={searchValueGames}
-                    onChange={heandleSearchGames}
+                    value={searchGames}
+                    onChange={heandleSearch}
                     onBlur={handleInputSearchVisible}
                     placeholder="Buscar por titulo ou descrição"
+                    searchName="searchGames"
                     />
             </TitleContent>
-            {allGames.length === 0 ? (
+            {(allGames.length === 0 && !searchGames) ? (
                 <LoarderComponent />
             ): (
                 <SectionGames games={allGames} />
             )}
-            {/* <SectionGames games={allGames} /> */}
         </Layout>
     );
 }

@@ -5,7 +5,7 @@ import Layout from '../../template/Layout'
 import ContainerGameSingle from "../../components/ContainerGameSingle"
 import FormComment from "../../components/FormComment"
 import ListComment from '../../components/ListComments'
-import api from "../../services/api"
+import { getGame } from "../../services/api"
 import { useComments } from "../../hooks/useComments"
 
 const PageGame = () => {
@@ -21,8 +21,7 @@ const PageGame = () => {
     useEffect(() => {
         (async () => {
             try{
-                const response = await api.get('game', { params: { id } })
-                setGame(g => [{ ...response.data }])
+                setGame([{ ...await getGame(id) }])
             } catch(e) {
                 history.push('/gameNotFound')
             }

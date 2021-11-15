@@ -4,12 +4,16 @@ import SectionGames from "../../components/SectionGames";
 import SectionNews from "../../components/SectionNews";
 import { useData } from "../../contexts/dataContext";
 import LoarderComponent from '../../components/LoaderComponent';
+import { useEffect } from 'react';
 
 const PageHome = () => {
-    const { allGames, newsData } = useData()
+    const { allGames, allNews, clearSearch } = useData()
 
+    useEffect(()=>{
+        clearSearch()
+    },[clearSearch])
     const games = allGames.slice(0, 4)
-    const news = newsData.slice(0, 6)
+    const news = allNews.slice(0, 6)
     return (
         <Layout pageTitle="Home" isHome={true}>
             <br/>

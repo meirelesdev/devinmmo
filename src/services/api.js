@@ -8,4 +8,19 @@ const api = axios.create({
     }
 })
 
+export const getData = async () => {
+    const response = await Promise.all([
+        await api.get('latestnews'),
+        await api.get('games')
+    ])
+    return {
+        news: response[0].data,
+        games: response[1].data,
+    }
+}
+export const getGame = async (id) => {    
+    const response = await api.get('game', { params: { id } })
+    return response.data
+}
+
 export default api
