@@ -1,9 +1,6 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Switch,
-  Route
-} from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion'
 
 import PageGames from "../pages/Games";
 import PageHome from '../pages/Home'
@@ -11,19 +8,28 @@ import PageNews from "../pages/News";
 import PageGame from "../pages/Game";
 import PageNotFound from "../pages/NotFound";
 
+const routes = [
+  { path: '/', exact: true, Component: PageHome },
+  { path: '/games/:id', exact: false, Component: PageGame },
+  { path: '/games', exact: true, Component: PageGames },
+  { path: '/news', exact: true, Component: PageNews },
+  { path: '*', exact: false, Component: PageNotFound }
+]
 const AppRoutes = () => {
-    return (
-      <BrowserRouter>
-          <Switch>
-            <Route exact={true} path="/" component={PageHome} />
-            <Route exact={false} path="/games/:id" component={PageGame} />
-            <Route exact={true} path="/games" component={PageGames} />
-            <Route exact={true} path="/news" component={PageNews} />
-            <Route path="*" component={PageNotFound} />
-          </Switch>
-      </BrowserRouter>
-        
-    )
-  }
+
+  return (
+    <BrowserRouter>
+      <AnimatePresence exitBeforeEnter>
+        <Switch>
+          {routes.map(({ path, exact, Component }) =>
+            <Route key={path} exact={exact} path={path}>
+                <Component />
+            </Route>
+          )}
+        </Switch>
+      </AnimatePresence>
+    </BrowserRouter>
+  )
+}
 
 export default AppRoutes
