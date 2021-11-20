@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { StyledLink } from '../MenuMobile/Styles'
 import styled from "styled-components";
 
 export const StyledMenu = styled.div`
@@ -10,25 +10,14 @@ export const StyledMenu = styled.div`
         display: flex;
         justify-content: space-evenly;
         flex-basis: 50%;
-    }    
-`
-export const StyledLink = styled(Link)`
-    text-decoration: none;
-    font-size: clamp(1em, 2vw, 3vw);
-    margin:  10px 0; 
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: ${({theme})=> theme.colors.text.white};
-    border-radius: ${({theme}) => theme.borders.radius};
-    transition: 0.2s all ease-in-out;
-    
-    &:hover{
-        transition: .2s all ease-in-out;
-        color:${({theme}) => theme.colors.text.primary};
-        background-color: ${({theme}) => theme.colors.background.secondary};
-        box-shadow: ${({theme}) => theme.colors.shadow.primary};
     }
+`
+export const StyledLinkMenu = styled(StyledLink)`
+    font-size: clamp(1em, 2vw, 3vw);
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    border-bottom: none;
+
    
 `

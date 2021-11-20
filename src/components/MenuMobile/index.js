@@ -1,5 +1,7 @@
 import ToggleTheme from '../ToggleTheme'
 import * as C from './Styles'
+import { itemsMenu } from '../Menu/items'
+
 
 const MenuMobile = ({ handleNavToggle }) => {
     return (
@@ -7,9 +9,10 @@ const MenuMobile = ({ handleNavToggle }) => {
             <div className="animate__animated animate__fadeInRight">
                 <ToggleTheme />
             </div>
-            <C.StyledLink className="animate__animated animate__fadeInRight" to="/">Início</C.StyledLink>
-            <C.StyledLink className="animate__animated animate__fadeInRight" to="/games">Jogos</C.StyledLink>
-            <C.StyledLink className="animate__animated animate__fadeInRight" to="/news">Noticias</C.StyledLink>
+            {itemsMenu.map((item, index)=>(
+                <C.StyledLink key={index} className="animate__animated animate__fadeInRight" to={item.path}>{item.description}</C.StyledLink>
+
+            ))}
             <C.CloseToggle className="animate__animated animate__fadeInRight" onClick={handleNavToggle} />
         </C.StyledMenu>
     )

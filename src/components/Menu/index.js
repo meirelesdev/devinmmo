@@ -1,13 +1,13 @@
 import * as C from './Styles'
+import { itemsMenu } from './items'
 
-const Menu = props => {
+const Menu = () => {
     return (
         <C.StyledMenu>
-            <C.StyledLink to="/">Início</C.StyledLink>
-            <C.StyledLink to="/games">Jogos</C.StyledLink>
-            <C.StyledLink to="/news">Notícias</C.StyledLink>
+            {itemsMenu.map((item, index)=>(
+                <C.StyledLinkMenu key={index} to={item.path}>{item.description}</C.StyledLinkMenu>
+            ))}
         </C.StyledMenu>
     )
 }
-
 export default Menu
